@@ -45,6 +45,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.fetch(:user, {})
+      params.fetch(:user, {}).permit(:name) # nameカラムをいれる目的
     end
 end
